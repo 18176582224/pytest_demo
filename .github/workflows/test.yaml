@@ -3,9 +3,9 @@ name: Pytest1
 # 触发条件：push 或 PR 到 main/master 时自动运行
 on:
   push:
-    branches: [ main, master ]
+    branches: [ main, master,dev_suyongsheng ]
   pull_request:
-    branches: [ main, master ]
+    branches: [ main, master,dev_suyongsheng ]
 
 jobs:
   test:
