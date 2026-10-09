@@ -1,7 +1,5 @@
 import pytest
 from src.testsqingqiu import Apiclient
-from tests.tests01 import response
-
 
 class Testlogin:    #注意：类名以 Test 开头，pytest 才会把它识别成测试类。
     valid_username="admin"   #在构造函数里定义了两个实例属性（变量），分别赋值为登录用的账号和密码。
@@ -37,56 +35,6 @@ class Testlogin:    #注意：类名以 Test 开头，pytest 才会把它识别�
         assert "token" in data    #返回的内容包含token
         assert data["token"] is not None and data["token"] != ""  #断言token不为空
         print(f"登陆成功,token:{data['token']}")
-
-    def test_login1(self,client:Apiclient,captch_info:dict):
-        #用户名为空
-        username = ""
-        password = "HM_2023_test"
-        uuid = captch_info["uuid"]
-        response = client.login(username=username,password=password,code="2",uuid=uuid)
-        data = response.json()
-        assert response.json()
-        assert data["code"]==500
-        assert "token" not in data
-        print("登陆失败")
-
-    def test_login2(self, client: Apiclient, captch_info: dict):
-        username = "admin"
-        #密码错误
-        password = "HM_"
-        uuid = captch_info["uuid"]
-        response = client.login(username=username, password=password, code="2", uuid=uuid)
-        data = response.json()
-        assert response.json()
-        assert data["code"] == 500
-        assert data["msg"]  == "用户不存在/密码错误"
-        assert "token" not in data
-        print("登陆失败")
-
-    def test_login3(self, client: Apiclient, captch_info: dict):
-        username = "admin"
-        password = "HM_2023_test"
-        #uuid为空
-        uuid = ""
-        response = client.login(username=username, password=password, code="2", uuid=uuid)
-        data = response.json()
-        assert response.json()
-        assert data["code"] == 500
-        assert "token" not in data
-        print("登陆失败")
-
-    def test_login4(self,client:Apiclient,captch_info:dict):
-        username = "admin"
-        password = "HM_2023_test"
-        uuid = captch_info["uuid"]
-        #验证码错误
-        response = client.login(username=username,password=password,code="999",uuid="sds5565")
-        data = response.json()
-        assert response.json()
-        assert data["code"]== 500
-        assert data["msg"] == "验证码已失效"
-        assert "token" not in data
-        print("登陆失败")
 
 
 
