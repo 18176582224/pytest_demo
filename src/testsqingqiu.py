@@ -118,7 +118,7 @@ class Apiclient(object):
         response = self.session.get(url,headers=self.headers)
         return response
 
-    def updata_course(self,course_id="",name="",subject="",price=None,applicable_person="",info=""):
+    def update_course(self,course_id="",name="",subject="",price=None,applicable_person="",info=""):
         """修改课程（需先登录）。
 
                参数：
@@ -151,7 +151,7 @@ class Apiclient(object):
         response = self.session.delete(url,headers=self.headers)
         return response
 
-    def add_file(self, name, phone, channel, sex, age, qq, weixin, activityId):
+    def add_file(self, name, phone, channel, sex, age, qq, weixin, activityId=None):
         """添加报名信息（具体接口地址和参数名请根据实际文档填写）"""
         url = f"{self.base_url}/api/clues/clue"
         payload = {
