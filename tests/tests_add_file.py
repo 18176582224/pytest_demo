@@ -11,7 +11,7 @@ class TestFileAdd:
         age=test_case["age"]
         qq=test_case["qq"]
         weixin=test_case["weixin"]
-        activityld=test_case["activityld"]
+        activityId=test_case["activityId"]
 
         response=logged_in_client.add_file(
             name=name,
@@ -21,7 +21,7 @@ class TestFileAdd:
             age = age,
             qq = qq,
             weixin = weixin,
-            activityld = activityld
+            activityId= activityId
         )
 
 
