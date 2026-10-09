@@ -1,12 +1,13 @@
 import requests
 
 # ============第一步：发送请求头============
-url = "http://kdtx-test.itheima.net/api/captchaImage"
+url = "https://kdtx-test.itheima.net/api/captchaImage"
 
 # ============第二步：定义请求头============
 headers = {
     "User-Agent": "Mozilla/5.0",    # 模拟成浏览器访问浏览器
     "Content-Type": "application/json"
+
 }
 
 # ============第三步：发送请求============
@@ -24,7 +25,7 @@ print("json数据", response.json())
 if response.status_code == 200:
     try:
         data = response.json()
-        print("json数据：", data)
+        print( data)
 
         # 从字典中提取需要的字段
         code = data.get("code")
@@ -36,6 +37,7 @@ if response.status_code == 200:
         print("json解析失败")
 else:
     print(f"请求失败，状态码：{response.status_code}")
+
 
 print("=" * 50)
 
