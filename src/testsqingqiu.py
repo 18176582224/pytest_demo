@@ -151,6 +151,22 @@ class Apiclient(object):
         response = self.session.delete(url,headers=self.headers)
         return response
 
+    def add_file(self, name, phone, channel, sex, age, qq, weixin, activityId):
+        """添加报名信息（具体接口地址和参数名请根据实际文档填写）"""
+        url = f"{self.base_url}/api/clues/clue"
+        payload = {
+            "name": name,
+            "phone": phone,
+            "channel": channel,
+            "sex": sex,
+            "age": age,
+            "qq": qq,
+            "weixin": weixin,
+            "activityId": activityId,
+        }
+        response = self.session.post(url, json=payload, headers=self.headers)
+        return response
+
 
     #关闭会话，释放连接资源
     def close(self):
