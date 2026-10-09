@@ -1,0 +1,1 @@
+{"uuid": "14e3f972-3a38-4b40-806f-89c13d2e5248", "children": ["b7790a50-6481-4c3a-b617-bdefb23e759b"], "befores": [{"name": "captcha_client", "status": "passed", "start": 1790754690238, "stop": 1790754691111}], "afters": [{"name": "captcha_client::<lambda>", "start": 1790754691407}], "start": 1790754690238, "stop": 1790754691407}

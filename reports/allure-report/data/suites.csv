@@ -1,0 +1,88 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","419","test_login","tests","2026-09-30","passed","2026-09-30","Testlogin","tests02","",""
+"多条件查询：一次同时传多个条件。
+
+多个条件之间是「并且」（AND）关系：要同时满足所有条件，才会被查出来。
+比如 {""subject"":""6"", ""price"":900} 表示「学科是 6 且 价格是 900」。
+","1781","test_query_multi_condition[\u5b66\u79d1+\u9002\u7528\u4eba\u7fa4]","tests","2026-09-30","passed","2026-09-30","TestCourseQuery","tests_query","",""
+"核心用例：一份代码，跑完数据文件里的所有场景。
+
+参数说明（都由 pytest 自动注入，不需要手动传）：
+  login_client  ：夹具1 提供的客户端对象
+  captcha_client：夹具2 提供的验证码信息（含 uuid）
+  test_case ：相当于一个列表，pytest 的 @pytest.mark.parametrize 装饰器会自动遍历数据源（login_test_data_json），
+            按你声明的名字 ""test_case""，逐条把数据赋值给test_case
+","284","test_login[test_case3]","tests","2026-09-30","passed","2026-09-30","Test_login_data","tests03","",""
+"","256","test_list_add[test_case1]","tests","2026-09-30","failed","2026-09-30","TestFileAdd","tests_add_file","",""
+"","342","test_login2","tests","2026-09-30","passed","2026-09-30","Testlogin","tests02","",""
+"""""
+新增课程用例
+参数（都由pytest自动注入）
+logged_in_client:conftest.py里定义好的【已经登录客户端】夹具
+test_case  : 一个空字典（pytest会把data.course_data引用的数据都加入到这个字典里面）
+","474","test_add_course_data_driven[test_case0]","tests","2026-09-30","passed","2026-09-30","TestCourseADD","tests05","",""
+"核心用例：一份代码，跑完数据文件里的所有场景。
+
+参数说明（都由 pytest 自动注入，不需要手动传）：
+  login_client  ：夹具1 提供的客户端对象
+  captcha_client：夹具2 提供的验证码信息（含 uuid）
+  test_case ：相当于一个列表，pytest 的 @pytest.mark.parametrize 装饰器会自动遍历数据源（login_test_data_json），
+            按你声明的名字 ""test_case""，逐条把数据赋值给test_case
+","135","test_login[test_case2]","tests","2026-09-30","passed","2026-09-30","Test_login_data","tests03","",""
+"多条件查询：一次同时传多个条件。
+
+多个条件之间是「并且」（AND）关系：要同时满足所有条件，才会被查出来。
+比如 {""subject"":""6"", ""price"":900} 表示「学科是 6 且 价格是 900」。
+","164","test_query_multi_condition[\u5b66\u79d1+\u4ef7\u683c]","tests","2026-09-30","passed","2026-09-30","TestCourseQuery","tests_query","",""
+"","291","test_login1","tests","2026-09-30","passed","2026-09-30","Testlogin","tests02","",""
+"单条件查询：一次只传一个查询条件。","301","test_query_single_condition[\u6309\u8bfe\u7a0b\u4ef7\u683c\u67e5\u8be2]","tests","2026-09-30","passed","2026-09-30","TestCourseQuery","tests_query","",""
+"","150","test_list_add[test_case0]","tests","2026-09-30","failed","2026-09-30","TestFileAdd","tests_add_file","",""
+"单条件查询：一次只传一个查询条件。","289","test_query_single_condition[\u6309\u8bfe\u7a0b\u540d\u79f0\u67e5\u8be2]","tests","2026-09-30","passed","2026-09-30","TestCourseQuery","tests_query","",""
+"从最早创建时间开始，删除 10 条课程。","0","test_delete_earliest_10_courses","tests","2026-09-30","skipped","2026-09-30","TestCourseDelete","tests_delet","",""
+"","223","test_login3","tests","2026-09-30","passed","2026-09-30","Testlogin","tests02","",""
+"多条件查询：一次同时传多个条件。
+
+多个条件之间是「并且」（AND）关系：要同时满足所有条件，才会被查出来。
+比如 {""subject"":""6"", ""price"":900} 表示「学科是 6 且 价格是 900」。
+","509","test_query_multi_condition[\u540d\u79f0+\u5b66\u79d1]","tests","2026-09-30","passed","2026-09-30","TestCourseQuery","tests_query","",""
+"核心用例：一份代码，跑完数据文件里的所有场景。
+
+参数说明（都由 pytest 自动注入，不需要手动传）：
+  login_client  ：夹具1 提供的客户端对象
+  captcha_client：夹具2 提供的验证码信息（含 uuid）
+  test_case ：相当于一个列表，pytest 的 @pytest.mark.parametrize 装饰器会自动遍历数据源（login_test_data_json），
+            按你声明的名字 ""test_case""，逐条把数据赋值给test_case
+","276","test_login[test_case1]","tests","2026-09-30","passed","2026-09-30","Test_login_data","tests03","",""
+"单条件查询：一次只传一个查询条件。","3324","test_query_single_condition[\u6309\u9002\u7528\u4eba\u7fa4\u67e5\u8be2]","tests","2026-09-30","passed","2026-09-30","TestCourseQuery","tests_query","",""
+"核心用例：一份代码，跑完数据文件里的所有场景。
+
+参数说明（都由 pytest 自动注入，不需要手动传）：
+  login_client  ：夹具1 提供的客户端对象
+  captcha_client：夹具2 提供的验证码信息（含 uuid）
+  test_case ：相当于一个列表，pytest 的 @pytest.mark.parametrize 装饰器会自动遍历数据源（login_test_data_json），
+            按你声明的名字 ""test_case""，逐条把数据赋值给test_case
+","159","test_login[test_case4]","tests","2026-09-30","passed","2026-09-30","Test_login_data","tests03","",""
+"核心用例：一份代码，跑完数据文件里的所有场景。
+
+参数说明（都由 pytest 自动注入，不需要手动传）：
+  login_client  ：夹具1 提供的客户端对象
+  captcha_client：夹具2 提供的验证码信息（含 uuid）
+  test_case ：相当于一个列表，pytest 的 @pytest.mark.parametrize 装饰器会自动遍历数据源（login_test_data_json），
+            按你声明的名字 ""test_case""，逐条把数据赋值给test_case
+","267","test_login[test_case0]","tests","2026-09-30","passed","2026-09-30","Test_login_data","tests03","",""
+"多条件查询：一次同时传多个条件。
+
+多个条件之间是「并且」（AND）关系：要同时满足所有条件，才会被查出来。
+比如 {""subject"":""6"", ""price"":900} 表示「学科是 6 且 价格是 900」。
+","208","test_query_multi_condition[\u9002\u7528\u4eba\u7fa4+\u4ef7\u683c]","tests","2026-09-30","passed","2026-09-30","TestCourseQuery","tests_query","",""
+"","138","test_login4","tests","2026-09-30","passed","2026-09-30","Testlogin","tests02","",""
+"单条件查询：一次只传一个查询条件。","1383","test_query_single_condition[\u6309\u8bfe\u7a0b\u5b66\u79d1\u67e5\u8be2]","tests","2026-09-30","passed","2026-09-30","TestCourseQuery","tests_query","",""
+"修改课程：改名称和价格，然后查询验证。","0","test_update_course","tests","2026-09-30","failed","2026-09-30","TestCourseUpdate","tests_update","",""
+"核心用例：一份代码，跑完数据文件里的所有场景。
+
+参数说明（都由 pytest 自动注入，不需要手动传）：
+  login_client  ：夹具1 提供的客户端对象
+  captcha_client：夹具2 提供的验证码信息（含 uuid）
+  test_case ：相当于一个列表，pytest 的 @pytest.mark.parametrize 装饰器会自动遍历数据源（login_test_data_json），
+            按你声明的名字 ""test_case""，逐条把数据赋值给test_case
+","293","test_login[test_case5]","tests","2026-09-30","passed","2026-09-30","Test_login_data","tests03","",""
