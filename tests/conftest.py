@@ -1,9 +1,10 @@
-import pytest
-from src.testsqingqiu import   Apiclient
 import sys
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+import pytest
+from src.testsqingqiu import   Apiclient
+
 @pytest.fixture(scope="function")
 def client():
     client=Apiclient()
