@@ -68,8 +68,8 @@ def created_course_id(logged_in_client):
     list_data=list_response.json()
 
     # 列表接口返回结构：{"total": N, "rows": [ {...}, {...} ]}
-    if list_data.get("row")  and len(list_data.get("row")) >0:
-        course_id = list_data.get("row")[0].get("id")   #获取第一条课程id
+    if list_data.get("rows")  and len(list_data.get("rows")) >0:
+        course_id = list_data.get("rows")[0].get("id")   #获取第一条课程id
         print(f"\n创建测试课程成功，ID{course_id}")
         return course_id
     else:
