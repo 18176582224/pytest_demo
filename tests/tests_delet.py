@@ -34,7 +34,7 @@ class TestCourseDelete:
             assert resp.status_code == 200
             data = resp.json()
             assert data["code"] == 200, f'删除课程 id ={course_id}失败：{data.get("msg")}'
-            print(f"已删除 id ={course_id} 创建时间{row["createTime"]}")
+            print(f"已删除 id ={course_id} 创建时间{row['createTime']}")
             deletd +=1
 
         print(f"成功删除{deletd}条课程")
