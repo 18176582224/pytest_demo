@@ -65,7 +65,7 @@ if login_response.status_code==200:
         token = login_result.get("token")
         print(f"登陆成功:{token}")
     else:
-        print(f"登陆失败",login_result.get("mag"))
+        print(f"登陆失败",login_result.get('msg'))
 
 
 

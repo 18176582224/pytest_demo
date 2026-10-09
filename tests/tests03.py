@@ -85,11 +85,11 @@ class Test_login_data:
         # \（反斜杠）：表示续行符。因为这一行太长了，写不下，所以用 \ 告诉
         # Python：“我还没写完，下一行接着看。”如果不写 \，Python会报语法错误。
         assert  data["code"]==expected_code,\
-            f"用例{test_id}失败：期望 code={expected_code},实际 code={data["code"]}"
+            f"用例{test_id}失败：期望 code={expected_code},实际 code={data['code']}"
 
         if expected_msg:
             assert data["msg"]==expected_msg,\
-                f"用例{test_id}失败 mag={expected_code},实际 code={[data["code"]]}"
+                f"用例{test_id}失败 mag={expected_code},实际 code={[data['code']]}"
 
             if check_token:
                 assert "token" in data

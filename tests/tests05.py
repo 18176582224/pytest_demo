@@ -42,13 +42,13 @@ class TestCourseADD:
 
         #断言业务状态码和提示信息和期望一致
         assert data["code"] == experience["code"],\
-            f"用例{test_id}失败：期望 msg={experience["msg"]},实际code={data["code"]}"
+            f"用例{test_id}失败：期望 msg={experience['msg']},实际code={data['code']}"
 
         if "msg" in experience:  #期望里写了msg才效验
             assert data["msg"] == experience["msg"],\
-                f"用例{test_id}失败：期望msg={experience["msg"]}，实际msg={data["msg"]}"
+                f"用例{test_id}失败：期望msg={experience['msg']}，实际msg={data['msg']}"
 
-        print(f"断言通过：code={data["code"]},msg={data["msg"]}")
+        print(f"断言通过：code={data['code']},msg={data['msg']}")
 
 
     #=====================第四步：如果需要，验证课程是否真的成功======================
@@ -59,14 +59,14 @@ class TestCourseADD:
             assert list_data["code"] == 200 #查询接口业务成功
             # 列表接口返回 {"total":N, "rows":[...]}，rows 是课程数组
             assert len(list_data.get("rows",[]))>0,\
-                f"课程{course["name"]}未在列表中找到"
+                f"课程{course['name']}未在列表中找到"
 
             #验证查到的第一条课程信息是否正确
             found_course  = list_data["rows"][0]
             assert found_course["name"]==course["name"],\
-                f"课程名称不匹配：{found_course["name"]} != {course["name"]}"
+                f"课程名称不匹配：{found_course['name']} != {course['name']}"
             assert found_course["price"] == course["price"], \
-                f"课程价格不匹配：{found_course["price"]} != {course["price"]}"
+                f"课程价格不匹配：{found_course['price']} != {course['price']}"
 
             course_id = found_course["id"]
             print(f"验证通过：课程已存在，ID={course_id}")
