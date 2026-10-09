@@ -19,7 +19,7 @@ class TestCourseDelete:
         courses = []
         for row in all_rows:
             if row.get("createTime")
-                courses.append(row)/5
+                courses.append(row)
         """
         # (3) 只取最早的10条
         to_delete = courses[:10]
@@ -33,7 +33,7 @@ class TestCourseDelete:
             resp = logged_in_client.delete_course(course_id)
             assert resp.status_code == 200
             data = resp.json()
-            assert data["code"] == 200,f"删除课程 id ={course_id}失败：{data.get("msg")}"
+            assert data["code"] == 200, f'删除课程 id ={course_id}失败：{data.get("msg")}'
             print(f"已删除 id ={course_id} 创建时间{row["createTime"]}")
             deletd +=1
 
